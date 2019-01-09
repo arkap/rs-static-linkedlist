@@ -1,0 +1,11 @@
+[package]
+name = "static-linkedlist"
+version = "0.1.0"
+edition = "2018"
+authors = ["Arne Kappen <arnekappen@gmx.de>"]
+description = "A linked list implementation on a static array. Intended for use in environments without dynamic memory allocation."
+repository = "https://github.com/arkap/rs-static-linkedlist"
+readme = "README.md"
+keywords = ["list", "static", "no-std", "embedded"]
+categories = ["embedded", "data-structures", "no-std"]
+license = "Apache License 2.0"
