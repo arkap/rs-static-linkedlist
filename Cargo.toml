@@ -8,4 +8,4 @@ repository = "https://github.com/arkap/rs-static-linkedlist"
 readme = "README.md"
 keywords = ["list", "static", "no-std", "embedded"]
 categories = ["embedded", "data-structures", "no-std"]
-license = "Apache License 2.0"
+license = "Apache-2.0"
