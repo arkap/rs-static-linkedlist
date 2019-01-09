@@ -1,6 +1,9 @@
+# Static-LinkedList
+
 Linked List implementation that uses a static array as backing memory for an arbitrary number of linked lists.
 
-# Usage
+## Usage
+
 To create a linked list you first have to create a `StaticLinkedListBackingArray` passing to it an array of `u8`.
 Then, you can create any number of lists backed by that array using `new_list()`. Note that creating arrays of zero-sized types
 is not possible.
