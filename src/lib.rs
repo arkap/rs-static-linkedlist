@@ -288,7 +288,7 @@ pub struct StaticLinkedListBackingArray<'buf, T> where T: Clear {
     free_space: usize,
     lists: usize,		// number of lists relying on this array
 
-    buf: &'buf mut [u8], // let the array own the buffer
+    _buf: &'buf mut [u8], // let the array own the buffer
     free: *mut Linked<T>, // pointer into free linked entries in the buffer
 }
 
@@ -350,7 +350,7 @@ impl<'buf, T> StaticLinkedListBackingArray<'buf, T> where T: Clear {
 				capacity: capacity,
 				free_space: capacity,
 				lists: 0,
-				buf: buf,
+				_buf: buf,
 				free: linkedbuf,
 			})
 		}
