@@ -10,6 +10,22 @@ impl Clear for U32Clear {
 }
 
 #[test]
+fn test_forbid_zst() {
+	struct ZeroSizedType {}
+
+	impl Clear for ZeroSizedType {
+		fn clear(&mut self) {}
+	}
+
+	let mut buf: [u8; 1] = [0; 1];
+	if let Err(error) = StaticLinkedListBackingArray::<ZeroSizedType>::new(&mut buf) {
+		assert!(error == ZeroSizedType);
+	} else {
+		assert!(false);
+	}
+}
+
+#[test]
 fn test_capacity_for() {
 	let wrapped_data_size = size_of::<Linked<U32Clear>>();
 	const BUF_SIZE: usize = StaticLinkedListBackingArray::<U32Clear>::capacity_for(10);
