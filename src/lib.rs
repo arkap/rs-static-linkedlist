@@ -1,3 +1,4 @@
+#![no_std]
 #![feature(const_fn)]
 
 //! Linked List implementation that uses a static array as backing memory for an arbitrary number of linked lists.
