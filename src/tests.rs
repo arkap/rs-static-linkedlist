@@ -307,7 +307,7 @@ fn test_at() {
 		error = true;
 		assert_eq!(e, IndexOutOfBounds);
 	}
-	assert!(error;);
+	assert!(error);
 }
 
 #[test]
